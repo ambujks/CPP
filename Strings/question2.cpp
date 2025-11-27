@@ -1,19 +1,22 @@
-// Input a string of size n and Update all the even positions in the string to character 'a'. Consider 0-based indexing.
+// Input a string and Update all the even positions in the string to character 'a'. Consider 0-based indexing.
 #include<iostream>
 #include<string>
 
 using namespace std;
 int main()
 {
-    string s = "cow is an animal with four legs.";
-    cout << s << endl;
-    int count = 0;
-    for(int i = 0; i < s.length() ; i++){
-        if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
-            count++;
+    string s;
+    cout << "Enter the sentence : ";
+    getline(cin, s);
+
+    for(int i = 0; i < s.length(); i++){
+        if(i%2==0){
+            s[i]='a';
         }
     }
-    cout << count << endl;
+
+    cout << "New line :-" << s << endl;
+
     return 0;
 }
 
